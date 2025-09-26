@@ -1,5 +1,3 @@
-Đây là các bảng định dạng trong C, được viết lại dưới dạng Markdown để bạn dễ dàng sao chép và sử dụng.
-
 ---
 
 ## 1. Bảng Ký hiệu Chuyển đổi Cơ bản (Conversion Specifiers)
@@ -58,3 +56,23 @@ Các cờ được đặt ngay sau dấu `%` và trước độ rộng.
 | **`%Lf`** | `long double` | Đọc giá trị kiểu `long double`. |
 | **`%s`** | `char*` | Đọc chuỗi ký tự (dừng khi gặp khoảng trắng). |
 | **`%d`**, **`%ld`**, **`%lld`** | `int`, `long`, `long long` | Đọc các kiểu số nguyên tương ứng. |
+### B. Độ Rộng (Width)
+
+Chỉ định số ký tự tối thiểu sẽ được in.
+
+| Ví dụ | Mô tả |
+| :--- | :--- |
+| **`%5d`** | Độ rộng tối thiểu 5 ký tự (căn phải). |
+| **`%-10s`** | Độ rộng tối thiểu 10 ký tự (căn trái). |
+
+### C. Độ Chính xác (Precision)
+
+Ý nghĩa khác nhau tùy thuộc vào kiểu dữ liệu:
+
+| Kiểu | Ví dụ | Mô tả |
+| :--- | :--- | :--- |
+| **Số thực (`%f`)** | **`%.3f`** | Số lượng chữ số sau dấu thập phân (ví dụ: 3). |
+| **Số nguyên (`%d`)** | **`%.5d`** | Số lượng chữ số tối thiểu (đệm bằng số 0 ở đầu). |
+| **Chuỗi (`%s`)** | **`%.5s`** | Số lượng ký tự tối đa sẽ được in ra từ chuỗi. |
+
+
